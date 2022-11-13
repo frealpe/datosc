@@ -1,0 +1,36 @@
+{
+  "name": "laboratorio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.9",
+    "@reduxjs/toolkit": "^1.8.6",
+    "axios": "^1.1.3",
+    "bootstrap": "^5.2.2",
+    "install": "^0.13.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
+    "react-redux": "^8.0.4",
+    "react-router-dom": "^6.4.2",
+    "sass": "^1.55.0",
+    "sweetalert2": "^11.6.6",
+    "wijmo": "^5.20221.857"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.1.0",
+    "vite": "^3.1.0"
+  }
+}
