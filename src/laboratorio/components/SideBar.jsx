@@ -1,6 +1,8 @@
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import ReceiptOutlinedIcon from '@mui/icons-material/ReceiptOutlined';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import TungstenOutlinedIcon from '@mui/icons-material/TungstenOutlined';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import { Box, Divider, Drawer, List, ListItem,ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material'
 import { useNavigate} from 'react-router-dom';
@@ -12,27 +14,39 @@ export const SideBar = ({drawerWidht=240}) => {
     const itemsList = [
    
         { 
-            text : "Home",
+            text : "Departamento del Cauca",
             icon: <HomeOutlinedIcon/>,
             onClick:()=> {navigate("/")}
         },
 
         { 
-            text : "Salas",
-            icon: <ReceiptOutlinedIcon/>,
-            onClick:()=> {navigate("/salas")}
-        },
-        
-        { 
-            text : "Laboratorios",
-            icon: <TungstenOutlinedIcon/>,
-            onClick: ()=>{navigate("/Laboratorios")}
+            text : "Lideres",
+            icon: <ConnectWithoutContactIcon/>,
+            onClick:()=> {navigate("/Lideres")}
         },
 
         { 
-            text : "Cronograma",
+            text : "Recoleccion",
+            icon: <VolunteerActivismIcon/>,
+            onClick:()=> {navigate("/Recoleccion")}
+        },
+
+        { 
+            text : "Estadistica Recoleccion",
+            icon: <TungstenOutlinedIcon/>,
+            onClick: ()=>{navigate("/Estarecoleccion")}
+        },
+
+        { 
+            text : "Registraduría",
+            icon: <HowToRegIcon/>,
+            onClick: ()=>{navigate("/Registro")}
+        },        
+
+        { 
+            text : "Estadistica",
             icon: <CalendarMonthOutlinedIcon/>,
-            onClick: ()=> {navigate("/Cronograma") }
+            onClick: ()=> {navigate("/Estadistica") }
         },        
         
     ]
@@ -64,7 +78,7 @@ export const SideBar = ({drawerWidht=240}) => {
                 >
                         <Toolbar>
                             <Typography variant='h8' noWrap component='div'>
-                                Dashboard Laboratorios
+                                Cauca nos Une
                             </Typography>
                         </Toolbar>
                     

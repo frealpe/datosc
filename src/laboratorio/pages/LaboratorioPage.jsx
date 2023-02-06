@@ -20,9 +20,9 @@ export const LaboratorioPage = () => {
                   <Routes>                  
                         <Route path="/" element={ <NoteView/> } />
                         <Route path="/salas" element={<Salas/>} />
-                        <Route path="/laboratorios" element={ <Laboratorios/> } />
+{/*                         <Route path="/laboratorios" element={ <Laboratorios/> } />
                         <Route path="/cronograma" element={ <Cronograma/> } />
-                        <Route path='/*' element={ <Navigate to="/" /> } />
+                        <Route path='/*' element={ <Navigate to="/" /> } /> */}
                   </Routes>  
                 </Toolbar>
 

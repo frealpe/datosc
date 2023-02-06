@@ -29,7 +29,7 @@ export const NavBar = ({ drawerWidth = 20 }) => {
             </IconButton>
 
             <Grid container direction='row' justifyContent='space-between' alignItems='center'>
-                <Typography variant='h6' noWrap component='div'> Laboratorios Automática Industrial </Typography>
+                <Typography variant='h6' noWrap component='div'> Firme Cauca nos Une </Typography>
 
                 <IconButton 
                     color='error'

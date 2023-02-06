@@ -2,8 +2,6 @@ import { loginUserWithEmailpassword, registerUserWithEmailpassword, renewAuthTok
 import { checkingCredentials } from "./";
 import { login, logout } from "./authSlice";
 ///////////////////////////////////////////////////////////////////////////////
-
-
 export const checkingAuthentication = (correo,password) => {
 
     return async(dispatch) =>{

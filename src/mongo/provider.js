@@ -1,6 +1,4 @@
 import laboratorioApi from "../api/laboratorioApi";
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////
 export const registerUserWithEmailpassword = async({correo,password,nombre})=>{
     
@@ -23,7 +21,6 @@ export const registerUserWithEmailpassword = async({correo,password,nombre})=>{
         }
     }
 }
-
 ///////////////////////////////////////////////////////////////////////////////////////////
 export const loginUserWithEmailpassword = async({correo,password})=>{
 
@@ -47,13 +44,10 @@ export const loginUserWithEmailpassword = async({correo,password})=>{
     }
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
-
 export const renewAuthToken = async()=>{
     
     try {
-
         const resp = await laboratorioApi.post('/auth/renew');
-
         return{
             ok: true, 
             resp
@@ -72,11 +66,10 @@ export const renewAuthToken = async()=>{
     }
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
-export const starLoadalltSalas=async()=>{
+export const getLoadLiders=async()=>{
     try {
-        const resp = await laboratorioApi.get('/salas');
-        const data = resp.data
-        
+        const resp = await laboratorioApi.get('/lider');
+        const data = resp.data;        
         return{
             ok: true, 
             data
@@ -92,13 +85,93 @@ export const starLoadalltSalas=async()=>{
 
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
-export const sendImage=async({coleccion,id})=>{
+export const actulizarData= async({id,nombre,celular,cedula,municipio})=>{
+
     try {
+        const resp = await laboratorioApi.put(`/lider/${id}`,{nombre,celular,cedula,municipio});
+        const data = resp.data;
+        return{
+            ok: true, 
+            data
+        }        
+    } catch (error) {
+        const errorMessage = "El token no se puede actualizar";  
+        return {
+            ok: false,
+            errorMessage,
+        }       
+        
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////////
+export const borrarData= async(id)=>{
 
-        const resp = await laboratorioApi.get(`/uploads/${coleccion}/${id}`);
+    try {
+        const resp = await laboratorioApi.delete(`/lider/${id}`);      
+        const data = resp.data
+        return{
+            ok: true, 
+            data
+        }        
+    } catch (error) {
+        const errorMessage = "El token no se puede actualizar";  
+        return {
+            ok: false,
+            errorMessage,
+        }       
+        
+    }
+}
 
+///////////////////////////////////////////////////////////////////////////////////////////
+export const crearLider= async({nombre,celular,cedula,municipio})=>{
+
+    try {
+        const resp = await laboratorioApi.post('/lider/',{nombre,celular,cedula,municipio});
         const data = resp.data;
         console.log(data);
+        return{
+            ok: true, 
+            data
+        }        
+    } catch (error) {
+        const errorMessage = "El token no se puede actualizar";  
+        return {
+            ok: false,
+            errorMessage,
+        }       
+        
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////
+export const getRegistraduria=async()=>{
+    try {
+        //const resp = await laboratorioApi.get('/registraduria',{params:{desde:1,limite:10}});
+        const resp = await laboratorioApi.get('/registraduria');        
+        const data = resp.data.registro;
+        const total = resp.data.totales;             
+        return{
+            total, 
+            data
+        }        
+    } catch (error) {
+        const errorMessage = "El token no se puede actualizar";  
+        return {
+            ok: false,
+            errorMessage,
+        }       
+        
+    }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+export const getrecolector=async()=>{
+    try {
+        //const resp = await laboratorioApi.get('/recolector',{params:{desde:1,limite:10}});
+        const resp = await laboratorioApi.get('/recolector');        
+        console.log(resp);
+        const data = resp.data;       
         return{
             data
         }        

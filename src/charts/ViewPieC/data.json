@@ -1,0 +1,78 @@
+{
+    "eje": [
+      {
+        "country": "Overall Experience",
+        "hot dog": 84,
+        "hot dogColor": "hsl(267, 70%, 50%)"
+      },
+      {
+        "country": "Video Streaming",
+        "hot dog": 183
+      },
+      {
+        "country": "Gaming",
+        "hot dog": 13
+      },
+      {
+        "country": "Conferencing",
+        "hot dog": 189
+      },
+      {
+        "country": "Browsing",
+        "hot dog": 53
+      }
+    ],
+    "pieejem": [
+      {
+        "id": "Excellent",
+        "label": "Excellent 25%",
+        "value": 500,
+        "color": "#2B8000"
+      },
+      {
+        "id": "Very good",
+        "label": "Very good 35%",
+        "value": 400,
+        "color": "#66CC00"
+      },
+      {
+        "id": "Good",
+        "label": "Good 10%",
+        "value": 100,
+        "color": "#F9D9D9"
+      },
+      {
+        "id": "Fair",
+        "label": "Fair 10%",
+        "value": 100,
+        "color": "#FE7474"
+      },
+      {
+        "id": "Poor",
+        "label": "Poor 10%",
+        "value": 100,
+        "color": "#D21212"
+      },
+      {
+        "id": "Very poor",
+        "label": "Very poor 10%",
+        "value": 100,
+        "color": "#650000"
+      }
+    ],
+    "ejem": [
+      {
+        "id": "High band usage",
+        "label": "High band usage 14%",
+        "value": 500,
+        "color": "#66CC00"
+      },
+      {
+        "id": "Low band usage",
+        "label": "Low band usage 86%",
+        "value": 100,
+        "color": "#E12339"
+      }
+    ]
+  }
+  
